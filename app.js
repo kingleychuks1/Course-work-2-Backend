@@ -32,7 +32,7 @@ app.use(function (req, res, next) {
     });
 });
 
-
+// Mongodb url let
 const {MongoClient} = require("mongodb");
 const ObjectID = require('mongodb').ObjectId;
 const uri = "mongodb+srv://WebstoreUser:webstorecw2@webstorecluster0.fek9jms.mongodb.net/Webstore?retryWrites=true&w=majority"
