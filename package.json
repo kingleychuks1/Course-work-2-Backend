@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node app"
   },
-  "author": "Kingley Chukwudume",
+  "author": "Emeka Kingley Chukwudume",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
