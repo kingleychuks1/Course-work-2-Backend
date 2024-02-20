@@ -79,6 +79,14 @@ app.post('/collection/:collectionName', (req, res, next) => {
     })
 })
 
+// create order
+app.post('/collection/:collectionName', (req, res, next) => {
+    req.collection.insertOne(req.body, (e, results) => {
+        if (e) return next(e);
+        res.send(results.ops)
+    })
+})
+
 //UPDATE Lesson Route PUT
 app.put('/collection/:collectionName/:id', (req, res, next) => {
     req.collection.update(
