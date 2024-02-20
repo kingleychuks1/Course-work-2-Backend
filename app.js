@@ -86,8 +86,9 @@ app.put('/collection/:collectionName/:id', (req, res, next) => {
         { $set: req.body },
         { safe: true, multi: false },
         (e, result) => {
+            // console.log(result)
             if (e) return next(e)
-            res.send((result.result.n === 1) ? { msg: 'success' } : { msg: 'error' })
+            res.send((result.acknowledged === true) ? { msg: 'success' } : { msg: 'error' })
         })
 })
 
